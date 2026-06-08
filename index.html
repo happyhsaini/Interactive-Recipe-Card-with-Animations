@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet Chocolate Cake Recipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="recipe-shell">
+    <section class="hero-panel" aria-labelledby="recipe-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Interactive recipe card</p>
+        <h1 id="recipe-title">Velvet Chocolate Cake</h1>
+        <p class="intro">A soft cocoa sponge with a glossy ganache finish, built as a responsive recipe card with guided cooking controls.</p>
+
+        <div class="stats" aria-label="Recipe details">
+          <div>
+            <span>Prep</span>
+            <strong>35 min</strong>
+          </div>
+          <div>
+            <span>Bake</span>
+            <strong>30 min</strong>
+          </div>
+          <div>
+            <span>Serves</span>
+            <strong>8</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="primary-btn" id="startCooking" type="button">Start Cooking</button>
+          <button class="ghost-btn" id="printRecipe" type="button">Print Recipe</button>
+        </div>
+      </div>
+
+      <figure class="dish-frame">
+        <img src="assets/chokalt.png" alt="Chocolate drip cake topped with strawberries">
+        <figcaption>Rich cocoa sponge, warm ganache, crisp berries.</figcaption>
+      </figure>
+    </section>
+
+    <section class="progress-panel" aria-label="Cooking progress">
+      <div class="progress-top">
+        <div>
+          <span class="section-kicker">Progress</span>
+          <h2>Cook along</h2>
+        </div>
+        <div class="timer" aria-live="polite">
+          <span>Remaining</span>
+          <strong id="timerDisplay">35:00</strong>
+        </div>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="current-step" id="currentStepText">Press Start Cooking to highlight the first step.</p>
+    </section>
+
+    <div class="content-grid">
+      <section class="recipe-section">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">What you need</span>
+            <h2>Ingredients</h2>
+          </div>
+          <button class="toggle-btn" id="toggleIngredients" type="button" aria-expanded="true" aria-controls="ingredientsList">Hide</button>
+        </div>
+        <ul class="ingredient-list" id="ingredientsList">
+          <li><span>1 3/4 cups</span> all-purpose flour</li>
+          <li><span>3/4 cup</span> cocoa powder</li>
+          <li><span>1 1/2 cups</span> caster sugar</li>
+          <li><span>2</span> large eggs</li>
+          <li><span>1 cup</span> warm milk</li>
+          <li><span>1/2 cup</span> melted butter</li>
+          <li><span>2 tsp</span> baking powder</li>
+          <li><span>1 tsp</span> vanilla extract</li>
+          <li><span>1/2 cup</span> chocolate ganache</li>
+        </ul>
+      </section>
+
+      <section class="recipe-section steps-section">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Method</span>
+            <h2>Steps</h2>
+          </div>
+          <button class="toggle-btn" id="toggleSteps" type="button" aria-expanded="true" aria-controls="stepsList">Hide</button>
+        </div>
+        <ol class="steps-list" id="stepsList">
+          <li>Preheat the oven to 180°C and grease an 8-inch cake tin.</li>
+          <li>Whisk flour, cocoa, sugar, and baking powder until evenly mixed.</li>
+          <li>Add eggs, warm milk, butter, and vanilla, then beat into a smooth batter.</li>
+          <li>Pour into the tin and bake for 30 minutes, until the center springs back.</li>
+          <li>Cool the cake fully before spreading ganache over the top.</li>
+          <li>Slice, garnish with berries, and serve while the ganache is glossy.</li>
+        </ol>
+        <div class="step-actions">
+          <button class="ghost-btn" id="prevStep" type="button">Previous</button>
+          <button class="primary-btn" id="nextStep" type="button">Next Step</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
